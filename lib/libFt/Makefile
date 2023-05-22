@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thmusik <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 00:52:53 by thmusik           #+#    #+#              #
-#    Updated: 2022/09/20 11:45:32 by thmusik          ###   ########.fr        #
+#    Updated: 2023/05/23 00:32:32 by tharunthorn      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,9 @@ all:			$(NAME)
 
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
+
+clean:
+				rm -f $(OBJS) $(BOBJS) $(NAME)
 
 fclean:			clean
 				$(RM) $(NAME)
