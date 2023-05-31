@@ -7,8 +7,8 @@
 typedef struct {
     void    *mlx;
     void	*win;
-} GameWindow;
+} game_window;
 
-void initializeGameWindow(GameWindow *gameWindow, char *name, int width, int height);
+void initialize_game_window(game_window *window, char *name, int width, int height);
 
 #endif

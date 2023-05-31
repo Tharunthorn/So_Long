@@ -3,17 +3,17 @@
 #define GAME_H
 
 
-#include "gameWindow.h"
-#include "gameMap.h"
+#include "game_window.h"
+#include "game_map.h"
 #include "utility.h"
 
 typedef struct {
-    GameWindow  *gameWindow;
-    GameMap     *gameMap;
-} Game;
+    game_window  *window;
+    game_map     *map;
+} game;
 
-void initializeGame(Game *game, char *mapPath);
+void initialize_game(game *game_main, char *map_path);
 
-void gameStart(Game *game);
+void game_start(game *game_main);
 
 #endif

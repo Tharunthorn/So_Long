@@ -8,8 +8,8 @@ typedef struct {
     int width;
     int height;
     char **map;
-} GameMap;
+} game_map;
 
-void initializeGameMap(GameMap *gameMap, char *mapPath);
+void initialize_game_map(game_map *map, char *map_path);
 
 #endif

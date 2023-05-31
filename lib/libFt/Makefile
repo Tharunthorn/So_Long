@@ -6,7 +6,7 @@
 #    By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 00:52:53 by thmusik           #+#    #+#              #
-#    Updated: 2023/05/23 00:32:32 by tharunthorn      ###   ########.fr        #
+#    Updated: 2023/05/25 13:54:32 by tharunthorn      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ BONUS			=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back
 OBJS			= $(SRCS:.c=.o)
 BOBJS			= $(BONUS:.c=.o)
 
-CC				= gcc
+CC				= cc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror -I.
 

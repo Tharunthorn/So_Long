@@ -6,13 +6,11 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:07:32 by thmusik           #+#    #+#             */
-/*   Updated: 2023/05/23 00:10:45 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/05/31 10:22:52 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/utility.h"
-
-
 
 char	*get_string(int fd, char *string)
 {

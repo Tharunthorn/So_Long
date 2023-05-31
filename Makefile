@@ -1,7 +1,7 @@
 # Makefile
 
 # Compiler
-CC = gcc
+CC = cc
 
 # Compiler flags
 CFLAGS = -Wall -Wextra -Werror
@@ -18,7 +18,7 @@ MINILIBX = $(MINILIBX_DIR)/libmlx.a
 INCLUDES = -I$(LIBFT_DIR) -I$(MINILIBX_DIR)
 
 # Source files
-SRCS = src/main/main.c src/main/game.c src/main/gameWindow.c src/map/gameMap.c src/utility/get_next_line.c
+SRCS = src/main/main.c src/main/game.c src/main/game_window.c src/map/game_map.c src/utility/get_next_line.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)
@@ -29,7 +29,7 @@ TARGET = So_Long
 # Rule to build the executable
 $(TARGET): $(OBJS) $(LIBFT) $(MINILIBX)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $@ $(OBJS) $(LIBFT) -L$(MINILIBX_DIR) -lmlx -lm -framework OpenGL -framework AppKit
-	
+
 # Rule to compile source files
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@

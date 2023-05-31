@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   game_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/25 14:03:44 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/05/31 10:42:54 by tharunthorn      ###   ########.fr       */
+/*   Created: 2023/05/31 10:21:52 by tharunthorn       #+#    #+#             */
+/*   Updated: 2023/05/31 10:43:40 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib/game.h"
+#include "../../lib/game_map.h"
 
-int	main(int argc, char **argv)
+void	initialize_game_map(game_map *map, char *map_path)
 {
-	game	*game_main;
-
-	if (argc < 2)
-		return (1);
-	game_main = (game *)malloc(sizeof(game));
-	initialize_game(game_main, argv[1]);
-	game_start(game_main);
-	free(game_main->window);
-	free(game_main->map);
-	return (0);
+	map->height = 500;
+	map->width = 500;
+	ft_strlen(map_path);
 }
