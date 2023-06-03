@@ -7,13 +7,13 @@
 #include "game_map.h"
 #include "utility.h"
 
-typedef struct {
-    game_window  *window;
-    game_map     *map;
-} game;
+typedef struct s_game{
+    t_game_window  *window;
+	t_game_panel   *panel;
+} t_game;
 
-void initialize_game(game *game_main, char *map_path);
+void initialize_game(t_game *game);
 
-void game_start(game *game_main);
+void game_start(t_game *game);
 
 #endif

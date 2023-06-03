@@ -7,8 +7,7 @@
 
 #include "libFt/libft.h"
 #include "miniLibX/mlx.h"
+#include <fcntl.h>
 
-
-char	*get_next_line(int fd);
 
 #endif
