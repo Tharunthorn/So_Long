@@ -12,4 +12,8 @@ typedef struct s_level {
 
 t_level	level_init(char *map_file);
 
+t_dimensions	level_dimensions_init(char *map_file);
+
+char	**level_map_init(char *map_file, t_dimensions dimensions);
+
 #endif

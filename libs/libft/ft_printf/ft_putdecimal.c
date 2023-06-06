@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putdecimal.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/06 18:02:41 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/07 00:31:08 by tharunthorn      ###   ########.fr       */
+/*   Created: 2022/10/28 09:09:53 by thmusik           #+#    #+#             */
+/*   Updated: 2023/06/07 00:14:11 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libs/game.h"
+#include "../libft.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv)
+int	ft_putdecimal(int n)
 {
-	t_game	game;
-	t_level	level;
-	char	*map_file;
+	int		len;
+	char	*number;
 
-	if (argc != 2)
-		return (0);
-	map_file = (char *)malloc(sizeof(char) * ft_strlen(argv[1]));
-	if (!map_file)
-		return (0);
-	ft_strlcpy(map_file, argv[1], ft_strlen(argv[1]));
-	level = level_init(map_file);
-	game = game_init(level);
-	game_run(game);
-	return (0);
+	number = ft_itoa(n);
+	ft_putstr_fd(number, 1);
+	len = ft_strlen(number);
+	free(number);
+	return (len);
 }

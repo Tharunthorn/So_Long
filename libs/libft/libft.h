@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:11:25 by thmusik           #+#    #+#             */
-/*   Updated: 2022/09/20 11:45:23 by thmusik          ###   ########.fr       */
+/*   Updated: 2023/06/07 00:29:46 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t bytesize);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
 void	*ft_memset(void *adress, int value, size_t bytelenght);
+
+int		ft_printf(const char *format, ...);
 
 void	ft_putchar_fd(char c, int fd);
 
