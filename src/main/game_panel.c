@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   game_panel.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/06 18:02:41 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/06 22:20:58 by tharunthorn      ###   ########.fr       */
+/*   Created: 2023/06/06 19:40:19 by tharunthorn       #+#    #+#             */
+/*   Updated: 2023/06/06 21:56:00 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/game.h"
 
-int		main(int argc, char **argv)
-{
-	t_game	game;
 
-	if (argc != 1)
-		return (0);
-	game = game_init();
-	game_run(game);
-	return (0);
+t_game_panel	game_panel_init(void)
+{
+	t_game_panel	game_panel;
+
+	game_panel.dimensions.width = 800;
+	game_panel.dimensions.height = 600;
+	return (game_panel);
 }

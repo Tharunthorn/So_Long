@@ -1,19 +1,38 @@
-
 #ifndef GAME_H
-#define GAME_H
+# define GAME_H
 
-
-#include "game_window.h"
-#include "game_map.h"
 #include "utility.h"
 
-typedef struct s_game{
-    t_game_window  *window;
-	t_game_panel   *panel;
-} t_game;
+typedef struct s_dimensions t_dimensions;
 
-void initialize_game(t_game *game);
+typedef struct s_game_window {
+	void	*mlx;
+	void	*win;
+} t_game_window;
 
-void game_start(t_game *game);
+typedef struct s_game_panel
+{
+	t_dimensions	dimensions;
+} t_game_panel;
+typedef struct s_game
+{
+	t_game_panel	game_panel;
+	t_game_window	game_window;
+}t_game;
+
+t_game	game_init(void);
+
+t_game_panel	game_panel_init(void);
+
+t_game_window	game_window_init(t_game_panel game_panel);
+
+int		game_loop(t_game game);
+
+void	game_update(t_game game);
+
+void	game_render(t_game game);
+
+void	game_run(t_game game);
+
 
 #endif

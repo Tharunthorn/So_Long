@@ -4,7 +4,7 @@
 CC = cc
 
 # Compiler flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -fsanitize=address -g
 
 # Directories
 LIBFT_DIR = lib/libFt
@@ -18,7 +18,7 @@ MINILIBX = $(MINILIBX_DIR)/libmlx.a
 INCLUDES = -I$(LIBFT_DIR) -I$(MINILIBX_DIR)
 
 # Source files
-SRCS = src/main/main.c src/main/game.c src/main/game_window.c src/map/game_map.c
+SRCS = src/main/main.c src/main/game.c src/main/game_window.c src/main/game_panel.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)

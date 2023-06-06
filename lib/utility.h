@@ -1,13 +1,14 @@
-#ifndef UTILLITY_H
-#define UTILLITY_H
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
+#ifndef UTILITY_H
+#define UTILITY_H
 
 #include "libFt/libft.h"
 #include "miniLibX/mlx.h"
-#include <fcntl.h>
+
+typedef struct s_dimensions
+{
+	int	width;
+	int	height;
+} t_dimensions;
 
 
 #endif

@@ -5,21 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/25 13:58:20 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/03 12:44:44 by tharunthorn      ###   ########.fr       */
+/*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
+/*   Updated: 2023/06/06 22:21:08 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/game.h"
 
-void	initialize_game(t_game *game, char *map_path)
+t_game	game_init(void)
 {
-	initialize_game_panel(game);
-	initialize_game_window(game);
+	t_game	game;
+
+	game.game_panel = game_panel_init();
+	game.game_window = game_window_init(game.game_panel);
+	return (game);
 }
 
-void	game_start(t_game *game)
+void	game_update(t_game game)
 {
-	mlx_loop_hook(game_main->window->mlx, game_loop, &game);
-	mlx_loop(game_main->window->mlx);
+	return ;
+}
+
+void	game_render(t_game game)
+{
+	return ;
+}
+
+int	game_loop(t_game game)
+{
+	return (0);
+}
+
+void	game_run(t_game game)
+{
+	mlx_loop_hook(game.game_window.mlx, game_loop, &game.game_window);
+	mlx_loop(game.game_window.mlx);
 }

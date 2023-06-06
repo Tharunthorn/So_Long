@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   game_window.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/06 18:02:41 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/06 22:20:58 by tharunthorn      ###   ########.fr       */
+/*   Created: 2023/06/06 19:40:23 by tharunthorn       #+#    #+#             */
+/*   Updated: 2023/06/06 21:14:15 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/game.h"
 
-int		main(int argc, char **argv)
+t_game_window	game_window_init(t_game_panel game_panel)
 {
-	t_game	game;
+	t_game_window	game_window;
 
-	if (argc != 1)
-		return (0);
-	game = game_init();
-	game_run(game);
-	return (0);
+	game_window.mlx = mlx_init();
+	game_window.win = mlx_new_window(game_window.mlx,
+			game_panel.dimensions.width,
+			game_panel.dimensions.height,
+			"Game");
+	return (game_window);
 }
