@@ -6,11 +6,11 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 19:40:23 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/06 21:14:15 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/06 23:51:58 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib/game.h"
+#include "../../libs/game.h"
 
 t_game_window	game_window_init(t_game_panel game_panel)
 {

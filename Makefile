@@ -7,8 +7,8 @@ CC = cc
 CFLAGS = -fsanitize=address -g
 
 # Directories
-LIBFT_DIR = lib/libFt
-MINILIBX_DIR = lib/miniLibX
+LIBFT_DIR = libs/libft
+MINILIBX_DIR = libs/minilibx
 
 # Libraries
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -18,8 +18,8 @@ MINILIBX = $(MINILIBX_DIR)/libmlx.a
 INCLUDES = -I$(LIBFT_DIR) -I$(MINILIBX_DIR)
 
 # Source files
-SRCS =	src/main/main.c src/main/game.c src/main/game_window.c src/main/game_panel.c \
-		src/level/level.c
+SRCS =	srcs/main/main.c srcs/main/game.c srcs/main/game_window.c srcs/main/game_panel.c \
+		srcs/levels/level.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)

@@ -6,20 +6,25 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:02:41 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/06 23:39:42 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/06 23:50:45 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib/game.h"
+#include "../../libs/game.h"
 
 int	main(int argc, char **argv)
 {
 	t_game	game;
 	t_level	level;
+	char	*map_file;
 
 	if (argc != 2)
 		return (0);
-	level = level_init();
+	map_file = (char *)malloc(sizeof(char) * ft_strlen(argv[1]));
+	if (!map_file)
+		return (0);
+	ft_strlcpy(map_file, argv[1], ft_strlen(argv[1]));
+	level = level_init(map_file);
 	game = game_init(level);
 	game_run(game);
 	return (0);

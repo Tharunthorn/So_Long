@@ -6,11 +6,11 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/06 23:08:29 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/06 23:52:02 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib/game.h"
+#include "../../libs/game.h"
 
 t_game	game_init(t_level level)
 {

@@ -1,8 +1,8 @@
 #ifndef UTILITY_H
 #define UTILITY_H
 
-#include "libFt/libft.h"
-#include "miniLibX/mlx.h"
+#include "libft/libft.h"
+#include "minilibx/mlx.h"
 #include "constant.h"
 
 typedef struct s_dimensions

@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_panel.c                                       :+:      :+:    :+:   */
+/*   level.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/06 19:40:19 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/06 23:27:47 by tharunthorn      ###   ########.fr       */
+/*   Created: 2023/06/06 23:34:22 by tharunthorn       #+#    #+#             */
+/*   Updated: 2023/06/06 23:52:10 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib/game.h"
+#include "../../libs/level.h"
 
-t_game_panel	game_panel_init(t_level level)
+t_level	level_init(char *map_file)
 {
-	t_game_panel	game_panel;
+	t_level	level;
 
-	game_panel.dimensions.width = level.dimensions.width * PIXEL_WIDTH;
-	game_panel.dimensions.height = level.dimensions.height * PIXEL_HEIGHT;
-	return (game_panel);
+	level.dimensions.width = 10;
+	level.dimensions.height = 10;
+	level.map = NULL;
+	return (level);
 }
