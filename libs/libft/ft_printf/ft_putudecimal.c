@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 22:38:46 by thmusik           #+#    #+#             */
-/*   Updated: 2023/06/07 00:14:58 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/07 00:34:32 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ unsigned int	ft_uintlen(unsigned	int n)
 	return (len);
 }
 
-char *unsigned_itoa(unsigned int n)
+char	*unsigned_itoa(unsigned int n)
 {
 	char	*str;
 	int		len;
