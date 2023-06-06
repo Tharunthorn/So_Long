@@ -6,17 +6,17 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/06 22:21:08 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/06 23:08:29 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/game.h"
 
-t_game	game_init(void)
+t_game	game_init(t_level level)
 {
 	t_game	game;
 
-	game.game_panel = game_panel_init();
+	game.game_panel = game_panel_init(level);
 	game.game_window = game_window_init(game.game_panel);
 	return (game);
 }

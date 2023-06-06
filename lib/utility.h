@@ -3,6 +3,7 @@
 
 #include "libFt/libft.h"
 #include "miniLibX/mlx.h"
+#include "constant.h"
 
 typedef struct s_dimensions
 {

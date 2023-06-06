@@ -18,7 +18,8 @@ MINILIBX = $(MINILIBX_DIR)/libmlx.a
 INCLUDES = -I$(LIBFT_DIR) -I$(MINILIBX_DIR)
 
 # Source files
-SRCS = src/main/main.c src/main/game.c src/main/game_window.c src/main/game_panel.c
+SRCS =	src/main/main.c src/main/game.c src/main/game_window.c src/main/game_panel.c \
+		src/level/level.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)

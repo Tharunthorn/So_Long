@@ -2,6 +2,7 @@
 # define GAME_H
 
 #include "utility.h"
+#include "level.h"
 
 typedef struct s_dimensions t_dimensions;
 
@@ -20,9 +21,9 @@ typedef struct s_game
 	t_game_window	game_window;
 }t_game;
 
-t_game	game_init(void);
+t_game	game_init(t_level level);
 
-t_game_panel	game_panel_init(void);
+t_game_panel	game_panel_init(t_level level);
 
 t_game_window	game_window_init(t_game_panel game_panel);
 
