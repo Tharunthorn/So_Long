@@ -11,7 +11,7 @@ typedef struct s_game t_game;
 
 t_game	game_init(char *map_file);
 
-t_game_panel	game_panel_init(char *map_file);
+t_game_panel	game_panel_init(t_game game, char *map_file);
 
 t_game_window	game_window_init(t_game_panel game_panel);
 

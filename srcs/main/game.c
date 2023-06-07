@@ -6,17 +6,18 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/07 22:42:57 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/07 23:55:01 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libs/game.h"
+#include "../../libs/level.h"
 
 t_game	game_init(char *map_file)
 {
 	t_game	game;
 
-	game.game_panel = game_panel_init(map_file);
+	game.game_panel = game_panel_init(game, map_file);
 	game.game_window = game_window_init(game.game_panel);
 	return (game);
 }
@@ -28,6 +29,7 @@ void	game_update(t_game game)
 
 void	game_render(t_game game)
 {
+	level_render(game);
 	return ;
 }
 
