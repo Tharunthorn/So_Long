@@ -6,12 +6,13 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/07 23:55:01 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/08 02:06:18 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libs/game.h"
 #include "../../libs/level.h"
+#include "../../libs/input.h"
 
 t_game	game_init(char *map_file)
 {
@@ -22,14 +23,18 @@ t_game	game_init(char *map_file)
 	return (game);
 }
 
-void	game_update(t_game game)
-{
-	return ;
-}
-
 void	game_render(t_game game)
 {
 	level_render(game);
+	return ;
+}
+
+void	game_update(t_game game)
+{
+	mlx_hook(game.game_window.win, ON_KEYDOWN, 0,
+		key_press_handler, &game.game_window);
+	mlx_hook(game.game_window.win, ON_KEYUP, 0,
+		key_release_handler, &game.game_window);
 	return ;
 }
 

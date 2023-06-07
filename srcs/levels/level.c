@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 23:34:22 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/08 00:52:59 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/08 02:12:37 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ void	draw_square(t_game game, int x, int y, int pixel_size, int color)
 	{
 		for (int j = 0; j < pixel_size; j++)
 		{
-			mlx_pixel_put(game.game_window.mlx, game.game_window.win, pixel_x + i, pixel_y + j, color);
+			mlx_pixel_put(game.game_window.mlx,
+				game.game_window.win, pixel_x + i, pixel_y + j, color);
 		}
 	}
 }

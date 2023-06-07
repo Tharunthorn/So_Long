@@ -1,0 +1,35 @@
+#ifndef INPUT_H
+#define INPUT_H
+
+#include "utility.h"
+
+typedef struct s_dimensions t_dimensions;
+typedef struct s_level t_level;
+typedef struct s_game_window t_game_window;
+typedef struct s_game_panel t_game_panel;
+typedef struct s_game t_game;
+
+
+enum {
+    ON_KEYDOWN = 2,
+    ON_KEYUP = 3,
+    ON_MOUSEDOWN = 4,
+    ON_MOUSEUP = 5,
+    ON_MOUSEMOVE = 6,
+    ON_EXPOSE = 12,
+    ON_DESTROY = 17
+};
+
+enum {
+    KEY_A = 0,
+    KEY_S = 1,
+    KEY_D = 2,
+    KEY_W = 13,
+    KEY_ESC = 53
+};
+
+int	key_press_handler(int keycode,  t_game_window game_window);
+
+int	key_release_handler(int keycode,  t_game_window game_window);
+
+#endif
