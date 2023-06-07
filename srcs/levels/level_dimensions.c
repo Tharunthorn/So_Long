@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 00:00:32 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/07 17:46:37 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/07 19:11:53 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ t_dimensions	level_dimensions_init(char *map_file)
 	close(fd);
 	return (dimensions);
 }
-
