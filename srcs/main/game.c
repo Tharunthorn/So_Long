@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/08 02:06:18 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/08 13:23:40 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	game_update(t_game game)
 		key_press_handler, &game.game_window);
 	mlx_hook(game.game_window.win, ON_KEYUP, 0,
 		key_release_handler, &game.game_window);
+	level_update(game);
 	return ;
 }
 

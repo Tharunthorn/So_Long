@@ -16,4 +16,6 @@ char	**level_map_init(char *map_file, t_dimensions dimensions);
 
 void	level_render(t_game game);
 
+void	level_update(t_game game);
+
 #endif

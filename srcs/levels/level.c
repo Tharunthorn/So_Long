@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 23:34:22 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/08 13:13:33 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/08 13:22:47 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,10 @@ void	level_render(t_game game)
 		}
 		pos_y++;
 	}
+}
+
+void	level_update(t_game game)
+{
+	mlx_clear_window(game.game_window.mlx, game.game_window.win);
+	level_render(game);
 }
