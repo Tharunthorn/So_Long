@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 23:34:22 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/08 13:08:08 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/08 13:13:33 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	level_render(t_game game)
 		{
 			level_put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
 				pos_y * PIXEL_HEIGHT, "textures/tile_map/ground_tile.xpm");
-			if (game.game_panel.level.map[y][x] == '1')
+			if (game.game_panel.level.map[pos_y][pos_x] == '1')
 				level_put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
 					pos_y * PIXEL_HEIGHT, "textures/tile_map/tree_tile.xpm");
 			pos_x++;
