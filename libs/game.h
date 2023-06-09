@@ -5,6 +5,7 @@
 
 typedef struct s_dimensions t_dimensions;
 typedef struct s_level t_level;
+typedef struct s_player t_player;
 typedef struct s_game_window t_game_window;
 typedef struct s_game_panel t_game_panel;
 typedef struct s_game t_game;

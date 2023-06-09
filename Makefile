@@ -20,7 +20,8 @@ INCLUDES = -I$(LIBFT_DIR) -I$(MINILIBX_DIR)
 # Source files
 SRCS =	srcs/main/main.c srcs/main/game.c srcs/main/game_window.c srcs/main/game_panel.c \
 		srcs/levels/level.c srcs/levels/level_dimensions.c srcs/levels/level_map.c \
-		srcs/inputs/input.c
+		srcs/inputs/input.c srcs/entities/player.c srcs/entities/player_position.c \
+		srcs/utilities/utility.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)

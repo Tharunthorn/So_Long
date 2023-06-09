@@ -9,6 +9,10 @@ typedef struct s_game_window t_game_window;
 typedef struct s_game_panel t_game_panel;
 typedef struct s_game t_game;
 
+extern int		g_is_up;
+extern int		g_is_down;
+extern int		g_is_left;
+extern int		g_is_right;
 
 enum {
     ON_KEYDOWN = 2,

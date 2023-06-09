@@ -6,7 +6,6 @@
 typedef struct s_dimensions t_dimensions;
 typedef struct s_level t_level;
 typedef struct s_game t_game;
-typedef struct s_img t_img;
 
 t_level	level_init(t_game game, char *map_file);
 

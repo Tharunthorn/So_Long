@@ -17,6 +17,11 @@ typedef struct s_level {
 	t_dimensions dimensions;
 } t_level;
 
+typedef struct s_player {
+	t_dimensions	position;;
+	int				direction;
+	int				speed;
+} t_player;
 typedef struct s_game_window {
 	void	*mlx;
 	void	*win;
@@ -26,12 +31,17 @@ typedef struct s_game_panel
 {
 	t_dimensions	dimensions;
 	t_level			level;
+	t_player		player;
 } t_game_panel;
 typedef struct s_game
 {
 	t_game_panel	game_panel;
 	t_game_window	game_window;
 }t_game;
+
+void	put_xpm_to_window(t_game game, int pos_x, int pos_y, char *file);
+
+int		colision_check(t_game game, t_dimensions new_position);
 
 
 #endif
