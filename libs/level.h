@@ -17,4 +17,8 @@ void	level_render(t_game game);
 
 void	level_update(t_game game);
 
+void	level_collect(t_game game, t_dimensions player_pos);
+
+void	level_exit(t_game game, t_dimensions player_pos);
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 00:06:14 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/08 23:35:30 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/10 22:15:19 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ void	map_read(int fd, char **map, t_dimensions dimensions)
 	}
 }
 
+int	is_map_valid(char **map, t_dimensions dimensions)
+{
+	return (1);
+}
+
 char	**level_map_init(char *map_file, t_dimensions dimensions)
 {
 	char	**map;
@@ -60,6 +65,10 @@ char	**level_map_init(char *map_file, t_dimensions dimensions)
 	}
 	map_read(fd, map, dimensions);
 	close(fd);
-	ft_printf("Map read successfully.\n");
+	if (is_map_valid(map, dimensions) == 0)
+	{
+		ft_printf("Error: Map is not valid.\n");
+		exit(1);
+	}
 	return (map);
 }

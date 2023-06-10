@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 18:32:44 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/08 23:35:13 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/10 14:30:21 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ t_dimensions	player_position_init(t_level level)
 		position.width = 0;
 		while (position.width < level.dimensions.width)
 		{
-			if (level.map[position.height][position.width] == 'P' ||
-				level.map[position.height][position.width] == 'p')
+			if (level.map[position.height][position.width] == 'P')
 			{
 				position.width *= PIXEL_WIDTH;
 				position.height *= PIXEL_HEIGHT;

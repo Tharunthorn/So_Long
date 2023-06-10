@@ -41,7 +41,7 @@ typedef struct s_game
 
 void	put_xpm_to_window(t_game game, int pos_x, int pos_y, char *file);
 
-int		colision_check(t_game game, t_dimensions new_position);
+int		colision_check(t_game game, t_dimensions new_position, char type);
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 20:27:25 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/09 23:33:22 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/10 10:48:19 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	put_xpm_to_window(t_game game, int pos_x, int pos_y, char *file)
 	return ;
 }
 
-int	colision_check(t_game game, t_dimensions new_position)
+int	colision_check(t_game game, t_dimensions new_position, char type)
 {
 	t_dimensions	t_lt;
 	t_dimensions	b_rt;
@@ -51,7 +51,7 @@ int	colision_check(t_game game, t_dimensions new_position)
 			pos.width = t_lt.width;
 			while (pos.width <= b_rt.width)
 			{
-				if (game.game_panel.level.map[pos.height][pos.width] == '1')
+				if (game.game_panel.level.map[pos.height][pos.width] == type)
 					return (1);
 				pos.width++;
 			}

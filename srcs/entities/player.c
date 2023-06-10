@@ -6,12 +6,13 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 18:24:47 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/09 23:08:02 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/10 22:11:40 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libs/player.h"
 #include "../../libs/input.h"
+#include "../../libs/level.h"
 
 t_player	player_init(t_level level)
 {
@@ -47,9 +48,11 @@ t_dimensions	player_update(t_game game)
 		new_position.width -= game.game_panel.player.speed;
 	if (g_is_right)
 		new_position.width += game.game_panel.player.speed;
-	if (colision_check(game, new_position))
-	{
+	if (colision_check(game, new_position, '1'))
 		return (game.game_panel.player.position);
-	}
+	if (colision_check(game, new_position, 'C'))
+		level_collect(game, new_position);
+	if (colision_check(game, new_position, 'E'))
+		level_exit(game, new_position);
 	return (new_position);
 }
