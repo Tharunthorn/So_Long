@@ -6,13 +6,13 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 23:34:22 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/10 22:14:37 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/11 11:51:07 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libs/level.h"
 
-t_level	level_init(t_game game, char *map_file)
+t_level	level_init(char *map_file)
 {
 	t_level	level;
 
@@ -33,17 +33,7 @@ void	level_render(t_game game)
 		pos_x = 0;
 		while (pos_x < game.game_panel.level.dimensions.width)
 		{
-			put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
-				pos_y * PIXEL_HEIGHT, "textures/tile_map/ground_tile.xpm");
-			if (game.game_panel.level.map[pos_y][pos_x] == '1')
-				put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
-					pos_y * PIXEL_HEIGHT, "textures/tile_map/tree_tile.xpm");
-			else if (game.game_panel.level.map[pos_y][pos_x] == 'C')
-				put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
-					pos_y * PIXEL_HEIGHT, "textures/item/item.xpm");
-			else if (game.game_panel.level.map[pos_y][pos_x] == 'E')
-				put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
-					pos_y * PIXEL_HEIGHT, "textures/tile_map/tree_tile.xpm");
+			tile_render(game, pos_x, pos_y);
 			pos_x++;
 		}
 		pos_y++;
@@ -82,9 +72,34 @@ void	level_collect(t_game g, t_dimensions player_pos)
 			pos.height++;
 		}
 	}
+	return ;
 }
 
-void	level_exit(t_game game, t_dimensions player_pos)
+void	level_exit(t_game g, t_dimensions player_pos)
 {
+	t_dimensions	t_lt;
+	t_dimensions	b_rt;
+	t_dimensions	pos;
+
+	t_lt.height = player_pos.height / PIXEL_HEIGHT;
+	t_lt.width = player_pos.width / PIXEL_WIDTH;
+	b_rt.height = (player_pos.height + PIXEL_HEIGHT - 1) / PIXEL_HEIGHT;
+	b_rt.width = (player_pos.width + PIXEL_WIDTH - 1) / PIXEL_WIDTH;
+	if (t_lt.height >= 0 && b_rt.height < g.game_panel.level.dimensions.height
+		&& t_lt.width >= 0 && b_rt.width < g.game_panel.level.dimensions.width)
+	{
+		pos.height = t_lt.height;
+		while (pos.height <= b_rt.height)
+		{
+			pos.width = t_lt.width;
+			while (pos.width <= b_rt.width)
+			{
+				if (is_exitable(g, pos))
+					exit(0);
+				pos.width++;
+			}
+			pos.height++;
+		}
+	}
 	return ;
 }

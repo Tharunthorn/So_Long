@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 01:39:33 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/08 21:47:04 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/11 11:07:11 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		g_is_down = 0;
 int		g_is_left = 0;
 int		g_is_right = 0;
 
-int	key_press_handler(int keycode, t_game_window game_window)
+int	key_press_handler(int keycode)
 {
 	if (keycode == KEY_ESC)
 		exit(0);
@@ -32,7 +32,7 @@ int	key_press_handler(int keycode, t_game_window game_window)
 	return (0);
 }
 
-int	key_release_handler(int keycode, t_game_window game_window)
+int	key_release_handler(int keycode)
 {
 	if (keycode == KEY_W)
 		g_is_up = 0;

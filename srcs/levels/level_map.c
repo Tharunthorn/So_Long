@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 00:06:14 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/10 22:15:19 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/11 17:45:50 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,14 @@ void	map_read(int fd, char **map, t_dimensions dimensions)
 
 int	is_map_valid(char **map, t_dimensions dimensions)
 {
+	(void)map;
+	(void)dimensions;
 	return (1);
 }
 
 char	**level_map_init(char *map_file, t_dimensions dimensions)
 {
 	char	**map;
-	char	ch;
 	int		fd;
 
 	map = (char **)malloc(sizeof(char *) * dimensions.height);

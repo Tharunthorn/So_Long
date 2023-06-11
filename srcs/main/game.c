@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/09 11:10:45 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/11 11:03:28 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_game	game_init(char *map_file)
 {
 	t_game	game;
 
-	game.game_panel = game_panel_init(game, map_file);
+	game.game_panel = game_panel_init(map_file);
 	game.game_window = game_window_init(game.game_panel);
 	ft_printf("init game success\n");
 	return (game);

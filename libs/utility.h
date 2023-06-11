@@ -43,5 +43,10 @@ void	put_xpm_to_window(t_game game, int pos_x, int pos_y, char *file);
 
 int		colision_check(t_game game, t_dimensions new_position, char type);
 
+int		is_exitable(t_game game, t_dimensions pos);
+
+int		is_all_collect(t_game game);
+
+void	tile_render(t_game game, int pos_x, int pos_y);
 
 #endif

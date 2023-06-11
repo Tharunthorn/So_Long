@@ -32,8 +32,8 @@ enum {
     KEY_ESC = 53
 };
 
-int	key_press_handler(int keycode,  t_game_window game_window);
+int	key_press_handler(int keycode);
 
-int	key_release_handler(int keycode,  t_game_window game_window);
+int	key_release_handler(int keycode);
 
 #endif

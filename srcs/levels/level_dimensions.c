@@ -5,35 +5,65 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 00:00:32 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/08 19:04:45 by tharunthorn      ###   ########.fr       */
+/*   Created: 2023/06/11 17:30:00 by tharunthorn       #+#    #+#             */
+/*   Updated: 2023/06/11 19:47:40 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libs/level.h"
 
+int	get_line_length(int fd)
+{
+	int		line_length;
+	char	ch;
+
+	line_length = 0;
+	while (read(fd, &ch, 1) == 1 && ch != '\n')
+		line_length++;
+	return (line_length);
+}
+
+t_dimensions	calculate_dimensions(int fd, int line_length)
+{
+	t_dimensions	dimensions;
+	char			ch;
+	int				current_length;
+
+	current_length = 0;
+	dimensions.width = line_length;
+	dimensions.height = 0;
+	while (read(fd, &ch, 1) == 1)
+	{
+		if (ch == '\n')
+		{
+			if (current_length != line_length)
+				exit(1);
+			dimensions.height++;
+			current_length = 0;
+		}
+		else
+			current_length++;
+	}
+	return (dimensions);
+}
+
 t_dimensions	level_dimensions_init(char *map_file)
 {
 	t_dimensions	dimensions;
 	int				fd;
-	char			ch;
+	int				line_length;
 
 	dimensions.width = 0;
 	dimensions.height = 0;
 	fd = open(map_file, O_RDONLY);
 	if (fd == -1)
-	{
-		ft_printf("map_file: %s\n", map_file);
-		ft_printf("Error: Could not open file.\n");
 		exit(1);
-	}
-	while (read(fd, &ch, 1) == 1)
-	{
-		if (ch == '\n')
-			dimensions.height++;
-		else if (dimensions.height == 0)
-			dimensions.width++;
-	}
+	line_length = get_line_length(fd);
+	close(fd);
+	fd = open(map_file, O_RDONLY);
+	if (fd == -1)
+		exit(1);
+	dimensions = calculate_dimensions(fd, line_length);
 	close(fd);
 	return (dimensions);
 }

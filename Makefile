@@ -4,7 +4,7 @@
 CC = cc
 
 # Compiler flags
-CFLAGS = -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 
 # Directories
 LIBFT_DIR = libs/libft

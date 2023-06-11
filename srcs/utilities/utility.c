@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 20:27:25 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/10 10:48:19 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/11 19:46:35 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,56 @@ int	colision_check(t_game game, t_dimensions new_position, char type)
 		}
 	}
 	return (0);
+}
+
+int	is_all_collect(t_game game)
+{
+	int		width;
+	int		height;
+
+	width = 0;
+	while (width < game.game_panel.dimensions.width)
+	{
+		height = 0;
+		while (height < game.game_panel.dimensions.height)
+		{
+			if (game.game_panel.level.map[height][width] == 'C')
+			{
+				return (0);
+			}
+			height++;
+		}
+		width++;
+	}
+	return (1);
+}
+
+int	is_exitable(t_game game, t_dimensions pos)
+{
+	if (game.game_panel.level.map[pos.height][pos.width] == 'E'
+		&& is_all_collect(game))
+		return (1);
+	return (0);
+}
+
+void	tile_render(t_game game, int pos_x, int pos_y)
+{
+	put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
+		pos_y * PIXEL_HEIGHT, "textures/tile_map/ground_tile.xpm");
+	if (game.game_panel.level.map[pos_y][pos_x] == '1')
+		put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
+			pos_y * PIXEL_HEIGHT, "textures/tile_map/tree_tile.xpm");
+	else if (game.game_panel.level.map[pos_y][pos_x] == 'C')
+		put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
+			pos_y * PIXEL_HEIGHT, "textures/item/item.xpm");
+	else if (game.game_panel.level.map[pos_y][pos_x] == 'E')
+	{
+		if (is_all_collect(game))
+			put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
+				pos_y * PIXEL_HEIGHT, "textures/exit/exit.xpm");
+		else
+			put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
+				pos_y * PIXEL_HEIGHT, "textures/tile_map/tree_tile.xpm");
+	}
+	return ;
 }
