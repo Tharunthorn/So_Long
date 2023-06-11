@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 18:24:47 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/11 22:11:50 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/11 22:14:07 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	player_render(t_game game)
 	put_xpm_to_window(game,
 		game.game_panel.player.position.width,
 		game.game_panel.player.position.height,
-		"textures/Link_Sprite/Link_Front_1.xpm");
+		"textures/link_sprite/link_front_1.xpm");
 	return ;
 }
 
