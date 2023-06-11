@@ -19,7 +19,7 @@ typedef struct s_level {
 
 typedef struct s_player {
 	t_dimensions	position;;
-	int				direction;
+	int				move_count;
 	int				speed;
 } t_player;
 typedef struct s_game_window {

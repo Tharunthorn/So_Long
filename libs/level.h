@@ -21,4 +21,14 @@ void	level_collect(t_game game, t_dimensions player_pos);
 
 void	level_exit(t_game game, t_dimensions player_pos);
 
+int		is_map_valid(char **map, t_dimensions dimensions);
+
+int		is_map_valid_player(char **map, t_dimensions dimensions);
+
+int		is_map_valid_exit(char **map, t_dimensions dimensions);
+
+int		is_map_valid_collect(char **map, t_dimensions dimensions);
+
+int		is_map_valid_wall(char **map, t_dimensions dimensions);
+
 #endif

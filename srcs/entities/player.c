@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 18:24:47 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/10 23:01:07 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/11 22:11:50 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_player	player_init(t_level level)
 	t_player	player;
 
 	player.position = player_position_init(level);
-	player.direction = 0;
+	player.move_count = 0;
 	player.speed = 3;
 	ft_printf("init player success\n");
 	return (player);

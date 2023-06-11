@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/11 11:03:28 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/11 22:10:26 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,15 @@ int	game_loop(t_game game)
 		key_press_handler, &game.game_window);
 	mlx_hook(game.game_window.win, ON_KEYUP, 0,
 		key_release_handler, &game.game_window);
+	if (g_is_up || g_is_down || g_is_left || g_is_right)
+	{
+		game.game_panel.player.move_count++;
+		ft_printf("move count: %d\n", game.game_panel.player.move_count);
+	}
 	game.game_panel.player.position = player_update(game);
 	game_update(game);
 	game_render(game);
-	usleep(10000);
+	usleep(1000);
 	return (0);
 }
 
