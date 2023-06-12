@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 12:35:58 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/29 19:06:23 by thmusik          ###   ########.fr       */
+/*   Updated: 2023/06/12 12:43:39 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,11 @@
 static int	ft_estim(long n)
 {
 	size_t	estim;
-	int		isneg;
 
 	estim = 0;
-	isneg = 0;
 	if (n < 0)
 	{
 		estim++;
-		isneg++;
 		n = -n;
 	}
 	while (n >= 1)
