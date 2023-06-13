@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 19:40:23 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/14 01:03:37 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 02:20:32 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_game_window	game_window_init(t_game_panel game_panel)
 	game_window.mlx = mlx_init();
 	game_window.win = mlx_new_window(game_window.mlx,
 			game_panel.dimensions.width * PIXEL_WIDTH,
-			game_panel.dimensions.height * PIXEL_HEIGHT,
+			(game_panel.dimensions.height + 1) * PIXEL_HEIGHT,
 			"The Legend of ZoLong");
 	return (game_window);
 }
