@@ -70,8 +70,10 @@ clean:
 fclean: clean
 	@$(MAKE) -C $(LIBFT_DIR) fclean
 	@rm -f $(TARGET)
-	
+
 
 re: fclean $(TARGET)
+
+bonus_re: fclean bonus
 
 .SUFFIXES: .c .o

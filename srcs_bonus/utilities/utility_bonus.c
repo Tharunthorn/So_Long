@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utility.c                                          :+:      :+:    :+:   */
+/*   utility_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 20:27:25 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/13 23:22:46 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:03:52 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/utility.h"
+#include "../includes/utility_bonus.h"
 
 void	put_xpm_to_window(t_game game, int pos_x, int pos_y, char *file)
 {

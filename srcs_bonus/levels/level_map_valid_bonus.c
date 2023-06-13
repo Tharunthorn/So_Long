@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   level_map_valid.c                                  :+:      :+:    :+:   */
+/*   level_map_valid_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 21:51:31 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/13 15:21:40 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:02:47 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/level.h"
+#include "../includes/level_bonus.h"
 
 int	is_map_valid_player(char **map, t_dimensions dimensions)
 {

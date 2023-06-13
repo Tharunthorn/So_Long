@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game.c                                             :+:      :+:    :+:   */
+/*   game_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/13 15:31:59 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:03:09 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
-#include "../includes/level.h"
-#include "../includes/input.h"
-#include "../includes/player.h"
+#include "../includes/game_bonus.h"
+#include "../includes/level_bonus.h"
+#include "../includes/input_bonus.h"
+#include "../includes/player_bonus.h"
 
 t_game	game_init(char *map_file)
 {
@@ -49,6 +49,7 @@ int	game_loop(t_game *game)
 		ft_printf("move count: %d\n", game->game_panel.player.move_count);
 	}
 	game->game_panel.player.position = player_update(*game);
+	game->game_panel.player.direction = player_direction(*game);
 	game_update(game);
 	game_render(game);
 	usleep(1000);

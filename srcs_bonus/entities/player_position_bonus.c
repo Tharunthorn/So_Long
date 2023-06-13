@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player_position.c                                  :+:      :+:    :+:   */
+/*   player_position_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 18:32:44 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/13 15:37:55 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:01:51 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/player.h"
+#include "../includes/player_bonus.h"
 
 t_dimensions	player_position_init(t_level level)
 {

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utility.h                                          :+:      :+:    :+:   */
+/*   utility_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 14:19:12 by thmusik           #+#    #+#             */
-/*   Updated: 2023/06/13 15:15:31 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:01:20 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <fcntl.h>
 # include "../../libs/libft/libft.h"
 # include "../../libs/minilibx/mlx.h"
-# include "constant.h"
+# include "constant_bonus.h"
 
 typedef struct s_dimensions
 {
@@ -33,6 +33,7 @@ typedef struct s_level
 typedef struct s_player
 {
 	t_dimensions	position;
+	int				direction;
 	int				move_count;
 	int				speed;
 }	t_player;

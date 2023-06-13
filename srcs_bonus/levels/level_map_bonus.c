@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   level_map.c                                        :+:      :+:    :+:   */
+/*   level_map_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 00:06:14 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/13 15:39:33 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:02:39 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/level.h"
+#include "../includes/level_bonus.h"
 
 int	file_type_check(char *map_file, char *file_type)
 {

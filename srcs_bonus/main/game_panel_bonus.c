@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_panel.c                                       :+:      :+:    :+:   */
+/*   game_panel_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 19:40:19 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/13 15:31:04 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:03:25 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
-#include "../includes/level.h"
-#include "../includes/player.h"
+#include "../includes/game_bonus.h"
+#include "../includes/level_bonus.h"
+#include "../includes/player_bonus.h"
 
 t_game_panel	game_panel_init(char *map_file)
 {

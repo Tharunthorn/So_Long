@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input.c                                            :+:      :+:    :+:   */
+/*   input_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 01:39:33 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/13 15:20:40 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:02:02 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/input.h"
+#include "../includes/input_bonus.h"
 
 int		g_is_up = 0;
 int		g_is_down = 0;
