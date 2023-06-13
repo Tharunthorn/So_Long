@@ -34,6 +34,9 @@ SRCS_BONUS = srcs_bonus/main/main_bonus.c srcs_bonus/main/game_bonus.c srcs_bonu
 # Object files
 OBJS = $(SRCS:.c=.o)
 
+# Bonus object files
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+
 # Executable
 TARGET = So_Long
 
@@ -55,14 +58,19 @@ $(MINILIBX):
 
 .PHONY: clean fclean re
 
+bonus: $(OBJS_BONUS) $(LIBFT) $(MINILIBX)
+	$(CC) $(CFLAGS) $(INCLUDES) -o $(TARGET) $(OBJS_BONUS) $(LIBFT) -L$(MINILIBX_DIR) -lmlx -lm -framework OpenGL -framework AppKit
+
 clean:
 	@$(MAKE) -C $(LIBFT_DIR) clean
 	@$(MAKE) -C $(MINILIBX_DIR) clean
 	@rm -f $(OBJS)
+	@rm -f $(OBJS_BONUS)
 
 fclean: clean
 	@$(MAKE) -C $(LIBFT_DIR) fclean
 	@rm -f $(TARGET)
+	
 
 re: fclean $(TARGET)
 
