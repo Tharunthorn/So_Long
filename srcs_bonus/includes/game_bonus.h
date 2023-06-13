@@ -6,12 +6,12 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/14 00:59:50 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:15:59 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GAME_H
-# define GAME_H
+#ifndef GAME_BONUS_H
+# define GAME_BONUS_H
 
 # include "utility_bonus.h"
 

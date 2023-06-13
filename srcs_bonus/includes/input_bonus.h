@@ -6,12 +6,12 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 15:00:40 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/14 00:59:59 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:16:13 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INPUT_H
-# define INPUT_H
+#ifndef INPUT_BONUS_H
+# define INPUT_BONUS_H
 
 # include "utility_bonus.h"
 

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   constant.h                                         :+:      :+:    :+:   */
+/*   constant_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:10:06 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/14 00:57:28 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:15:44 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONSTANT_H
-# define CONSTANT_H
+#ifndef CONSTANT_BONUS_H
+# define CONSTANT_BONUS_H
 
 # define PIXEL_WIDTH 16
 # define PIXEL_HEIGHT 16

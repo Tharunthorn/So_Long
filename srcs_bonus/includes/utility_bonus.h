@@ -6,12 +6,12 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 14:19:12 by thmusik           #+#    #+#             */
-/*   Updated: 2023/06/14 01:01:20 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:16:49 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILITY_H
-# define UTILITY_H
+#ifndef UTILITY_BONUS_H
+# define UTILITY_BONUS_H
 
 # include <fcntl.h>
 # include "../../libs/libft/libft.h"

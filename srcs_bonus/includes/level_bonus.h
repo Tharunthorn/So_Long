@@ -6,12 +6,12 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 15:07:28 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/14 01:00:09 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 01:16:24 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LEVEL_H
-# define LEVEL_H
+#ifndef LEVEL_BONUS_H
+# define LEVEL_BONUS_H
 
 # include "utility_bonus.h"
 
