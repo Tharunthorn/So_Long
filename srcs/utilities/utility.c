@@ -6,11 +6,11 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 20:27:25 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/11 19:46:35 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/13 23:22:46 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libs/utility.h"
+#include "../includes/utility.h"
 
 void	put_xpm_to_window(t_game game, int pos_x, int pos_y, char *file)
 {
@@ -108,7 +108,7 @@ void	tile_render(t_game game, int pos_x, int pos_y)
 				pos_y * PIXEL_HEIGHT, "textures/exit/exit.xpm");
 		else
 			put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
-				pos_y * PIXEL_HEIGHT, "textures/tile_map/tree_tile.xpm");
+				pos_y * PIXEL_HEIGHT, "textures/tile_map/ground_tile.xpm");
 	}
 	return ;
 }

@@ -6,11 +6,11 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 21:51:31 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/11 22:02:19 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/13 15:21:40 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libs/level.h"
+#include "../includes/level.h"
 
 int	is_map_valid_player(char **map, t_dimensions dimensions)
 {

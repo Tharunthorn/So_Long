@@ -6,11 +6,11 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 01:39:33 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/11 11:07:11 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/13 15:20:40 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libs/input.h"
+#include "../includes/input.h"
 
 int		g_is_up = 0;
 int		g_is_down = 0;

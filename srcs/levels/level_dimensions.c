@@ -6,11 +6,11 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 17:30:00 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/11 19:47:40 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/13 16:21:39 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libs/level.h"
+#include "../includes/level.h"
 
 int	get_line_length(int fd)
 {
@@ -37,7 +37,10 @@ t_dimensions	calculate_dimensions(int fd, int line_length)
 		if (ch == '\n')
 		{
 			if (current_length != line_length)
+			{
+				ft_printf("Error: Map is not valid.\n");
 				exit(1);
+			}
 			dimensions.height++;
 			current_length = 0;
 		}
@@ -57,12 +60,18 @@ t_dimensions	level_dimensions_init(char *map_file)
 	dimensions.height = 0;
 	fd = open(map_file, O_RDONLY);
 	if (fd == -1)
+	{
+		ft_printf("Error\n");
 		exit(1);
+	}
 	line_length = get_line_length(fd);
 	close(fd);
 	fd = open(map_file, O_RDONLY);
 	if (fd == -1)
+	{
+		ft_printf("Error\n");
 		exit(1);
+	}
 	dimensions = calculate_dimensions(fd, line_length);
 	close(fd);
 	return (dimensions);

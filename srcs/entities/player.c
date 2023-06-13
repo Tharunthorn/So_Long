@@ -6,13 +6,13 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 18:24:47 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/11 22:14:07 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/13 18:01:36 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libs/player.h"
-#include "../../libs/input.h"
-#include "../../libs/level.h"
+#include "../includes/player.h"
+#include "../includes/input.h"
+#include "../includes/level.h"
 
 t_player	player_init(t_level level)
 {
@@ -20,8 +20,7 @@ t_player	player_init(t_level level)
 
 	player.position = player_position_init(level);
 	player.move_count = 0;
-	player.speed = 3;
-	ft_printf("init player success\n");
+	player.speed = 2;
 	return (player);
 }
 

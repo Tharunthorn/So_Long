@@ -6,11 +6,11 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 23:34:22 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/11 11:51:07 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/13 15:30:24 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libs/level.h"
+#include "../includes/level.h"
 
 t_level	level_init(char *map_file)
 {
@@ -18,7 +18,6 @@ t_level	level_init(char *map_file)
 
 	level.dimensions = level_dimensions_init(map_file);
 	level.map = level_map_init(map_file, level.dimensions);
-	ft_printf("init level success\n");
 	return (level);
 }
 

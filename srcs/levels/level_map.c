@@ -6,11 +6,22 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 00:06:14 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/11 21:59:03 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/13 15:39:33 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libs/level.h"
+#include "../includes/level.h"
+
+int	file_type_check(char *map_file, char *file_type)
+{
+	char	*extension;
+
+	extension = ft_strchr(map_file, '.');
+	if (extension != NULL && ft_strncmp(extension, file_type,
+			ft_strlen(file_type)) == 0)
+		return (1);
+	return (0);
+}
 
 void	map_read(int fd, char **map, t_dimensions dimensions)
 {
@@ -51,7 +62,7 @@ char	**level_map_init(char *map_file, t_dimensions dimensions)
 		exit(1);
 	}
 	fd = open(map_file, O_RDONLY);
-	if (fd == -1)
+	if (fd == -1 || file_type_check(map_file, ".ber") == 0)
 	{
 		ft_printf("map_file: %s\n", map_file);
 		ft_printf("Error: Could not open file.\n");
