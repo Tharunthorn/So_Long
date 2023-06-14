@@ -38,7 +38,7 @@ OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 # Executable
-TARGET = So_Long
+TARGET = so_long
 
 # Rule to build the executable
 $(TARGET): $(OBJS) $(LIBFT) $(MINILIBX)
