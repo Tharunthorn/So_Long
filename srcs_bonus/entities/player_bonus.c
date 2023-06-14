@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 18:24:47 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/14 00:58:36 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 14:13:11 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,39 @@ t_player	player_init(t_level level)
 	return (player);
 }
 
+void	player_render_animation(t_game g, int frame, char *img_1, char *img_2)
+{
+	if (frame % 2 == 0)
+		put_xpm_to_window(g,
+			g.game_panel.player.position.width,
+			g.game_panel.player.position.height,
+			img_1);
+	else
+		put_xpm_to_window(g,
+			g.game_panel.player.position.width,
+			g.game_panel.player.position.height,
+			img_2);
+	return ;
+}
+
 void	player_render(t_game game)
 {
 	if (game.game_panel.player.direction == 0)
-		put_xpm_to_window(game,
-			game.game_panel.player.position.width,
-			game.game_panel.player.position.height,
-			"textures/link_sprite/link_back_1.xpm");
-	else if (game.game_panel.player.direction == 1)
-		put_xpm_to_window(game,
-			game.game_panel.player.position.width,
-			game.game_panel.player.position.height,
-			"textures/link_sprite/link_front_1.xpm");
-	else if (game.game_panel.player.direction == 2)
-		put_xpm_to_window(game,
-			game.game_panel.player.position.width,
-			game.game_panel.player.position.height,
-			"textures/link_sprite/link_left_1.xpm");
-	else if (game.game_panel.player.direction == 3)
-		put_xpm_to_window(game,
-			game.game_panel.player.position.width,
-			game.game_panel.player.position.height,
-			"textures/link_sprite/link_right_1.xpm");
+		player_render_animation(game, game.game_panel.player.move_count,
+			"textures/link_sprite/link_back_1.xpm",
+			"textures/link_sprite/link_back_2.xpm");
+	if (game.game_panel.player.direction == 1)
+		player_render_animation(game, game.game_panel.player.move_count,
+			"textures/link_sprite/link_front_1.xpm",
+			"textures/link_sprite/link_front_2.xpm");
+	if (game.game_panel.player.direction == 2)
+		player_render_animation(game, game.game_panel.player.move_count,
+			"textures/link_sprite/link_left_1.xpm",
+			"textures/link_sprite/link_left_2.xpm");
+	if (game.game_panel.player.direction == 3)
+		player_render_animation(game, game.game_panel.player.move_count,
+			"textures/link_sprite/link_right_1.xpm",
+			"textures/link_sprite/link_right_2.xpm");
 	return ;
 }
 

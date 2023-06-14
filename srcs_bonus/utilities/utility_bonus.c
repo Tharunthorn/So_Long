@@ -6,7 +6,7 @@
 /*   By: tharunthornmusik <tharunthornmusik@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 20:27:25 by tharunthorn       #+#    #+#             */
-/*   Updated: 2023/06/14 01:03:52 by tharunthorn      ###   ########.fr       */
+/*   Updated: 2023/06/14 13:50:18 by tharunthorn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,10 +94,10 @@ int	is_exitable(t_game game, t_dimensions pos)
 void	tile_render(t_game game, int pos_x, int pos_y)
 {
 	put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
-		pos_y * PIXEL_HEIGHT, "textures/tile_map/ground_tile.xpm");
+		pos_y * PIXEL_HEIGHT, "textures/tile_map/dungeon_ground.xpm");
 	if (game.game_panel.level.map[pos_y][pos_x] == '1')
 		put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
-			pos_y * PIXEL_HEIGHT, "textures/tile_map/tree_tile.xpm");
+			pos_y * PIXEL_HEIGHT, "textures/tile_map/dungeon_wall.xpm");
 	else if (game.game_panel.level.map[pos_y][pos_x] == 'C')
 		put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
 			pos_y * PIXEL_HEIGHT, "textures/item/item.xpm");
@@ -105,10 +105,10 @@ void	tile_render(t_game game, int pos_x, int pos_y)
 	{
 		if (is_all_collect(game))
 			put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
-				pos_y * PIXEL_HEIGHT, "textures/exit/exit.xpm");
+				pos_y * PIXEL_HEIGHT, "textures/exit/dungeon_exit_open.xpm");
 		else
 			put_xpm_to_window(game, pos_x * PIXEL_WIDTH,
-				pos_y * PIXEL_HEIGHT, "textures/tile_map/ground_tile.xpm");
+				pos_y * PIXEL_HEIGHT, "textures/exit/dungeon_exit_close.xpm");
 	}
 	return ;
 }
